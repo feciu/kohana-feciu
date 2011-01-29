@@ -1,0 +1,21 @@
+require
+    formo
+    jelly
+    jelly-formo
+    jelly-auth
+    kohana-mogration
+    dbforge
+
+
+login: admin
+pass: admin12
+
+
+
+'file' => new Field_File(array(
+                                    "path"=> "upload",
+                                    "rules"=> array(
+                                            'Upload::not_empty' => NULL,
+                                            'Upload::type'      => array(':value', 'PNG, PNG or GIF' => array('jpg', 'png', 'gif')),
+                                            'Upload::size'      => array(':value', '3M'),)
+                                )),
